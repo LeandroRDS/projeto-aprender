@@ -1,0 +1,62 @@
+body{
+    background-color: rgb(153, 140, 140);
+}
+
+.div-clss-senha{
+    background-color:rgb(0, 0, 0) ;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+#id-div-senha{
+    display: flex;
+    justify-content: center;
+    margin:auto;
+
+}
+#id-div-senha input{
+    width: 200px;
+    height: 30px;
+    padding-right: 25px;
+    border: 2px solid rgb(29, 27, 143) ;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    will-change: opacity, transform;
+}
+
+
+/* div olho*/
+#id-div-olho{
+    background-color: aqua;
+    position: relative;
+    cursor: pointer;
+    right: 32px;
+    top: 3px;
+    width: 28px;
+    height: 24px;
+}
+
+#id-div-olho img#id-img-olho{
+    position: relative;
+    cursor: pointer;
+    right: 0px;
+    top: 2px;
+    width: 28px;
+    height: 20px;
+    color: white;
+}
+
+#id-img-iris{
+    position:absolute;
+    cursor: pointer;
+    width: 8px;
+    border-radius: 50%;
+    pointer-events:none; /* Impede que a pupila receba eventos do mouse */
+}
+
+

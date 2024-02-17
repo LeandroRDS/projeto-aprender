@@ -1,0 +1,67 @@
+/* Reset básico CSS */
+
+/* Aplica uma borda de caixa para garantir que os elementos tenham a mesma aparência em todos os navegadores */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove a decoração de texto padrão (sublinhado, etc.) */
+a {
+  text-decoration: none;
+}
+
+/* Define a cor do texto padrão para preto */
+body {
+  color: #000;
+}
+
+/* Define uma fonte padrão e um tamanho de texto */
+body,
+button,
+input,
+select,
+textarea {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+/* Remove a lista de estilos */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Remove margens e preenchimentos padrão para elementos de lista */
+li {
+  margin: 0;
+  padding: 0;
+}
+
+/* Remova a formatação padrão do campo do botão */
+button {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+}
+
+/* Remova as bordas dos elementos de entrada e área de texto */
+input,
+textarea {
+  outline: none;
+}
+
+/* Remove a aparência padrão dos elementos de formulário */
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+/* Remove a aparência de foco padrão */
+:focus {
+  outline: none;
+}

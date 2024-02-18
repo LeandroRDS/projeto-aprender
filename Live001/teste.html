@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bolinha dentro do círculo</title>
+  <style>
+#container {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  border: 1px solid #000;
+}
+
+#bolinha {
+  position: relative;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #000;
+  z-index: 100;
+}
+
+#circulo {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  z-index: 110;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+  </style>
+</head>
+<body>
+<div id="container">
+  <div id="bolinha"></div>
+  <div id="circulo"></div>
+</div>
+  <script>
+const container = document.getElementById("container");
+const bolinha = document.getElementById("bolinha");
+const circulo = document.getElementById("circulo");
+
+const circuloRect = circulo.getBoundingClientRect();
+const circuloCentroX = circuloRect.left + circuloRect.width /2 ;
+const circuloCentroY = circuloRect.top + circuloRect.height /2;
+const circuloRaio = circuloRect.width / 2;
+
+document.addEventListener("mousemove", (e) => {
+  const cursorX = e.clientX - container.offsetLeft;
+  const cursorY = e.clientY - container.offsetTop;
+
+  // Calcular nova posição da bolinha dentro do círculo
+  let bolinhaLeft = Math.max(circuloCentroX - circuloRaio + 5, Math.min(cursorX - 5, circuloCentroX + circuloRaio - 1));
+  let bolinhaTop = Math.max(circuloCentroY - circuloRaio + 5, Math.min(cursorY - 5, circuloCentroY + circuloRaio - 1));
+
+  bolinha.style.left = `${bolinhaLeft}px`;
+  bolinha.style.top = `${bolinhaTop}px`;
+});
+
+  </script>
+</body>
+</html>

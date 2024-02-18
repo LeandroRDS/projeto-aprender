@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password</title>
+</head>
+<body>
+<style>
+#eye {
+  width: 100px;
+  height: 100px;
+  background-color: #000;
+  border-radius: 50%;
+  position: absolute;
+}
+
+#eye:before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  position: absolute;
+  left: 40px;
+  top: 40px;
+}
+</style>
+<div id="eye"></div>
+<script>
+const eye = document.getElementById("eye");
+
+document.addEventListener("mousemove", (e) => {
+  const x = e.clientX;
+  const y = e.clientY;
+  const radian = Math.atan2(y - (eye.offsetTop + eye.offsetHeight / 2), x - (eye.offsetLeft + eye.offsetWidth / 2));
+  const rotate = radian * (180 / Math.PI) * -1;
+  eye.style.transform = `rotate(${rotate}deg)`;
+});
+</script>
+</body>
+</html>

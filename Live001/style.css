@@ -22,17 +22,19 @@ body{
     width: 200px;
     height: 30px;
     padding-right: 25px;
-    border: 2px solid rgb(29, 27, 143) ;
+    border: 2px solid rgb(255, 255, 255) ;
     border-radius: 4px;
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
-    will-change: opacity, transform;
+    position: relative;
+    top: 4px;
+   
 }
 
 
 /* div olho*/
 #id-div-olho{
-    background-color: aqua;
+    background-color: transparent;
     position: relative;
     cursor: pointer;
     right: 32px;
@@ -41,19 +43,21 @@ body{
     height: 24px;
 }
 
-#id-div-olho img#id-img-olho{
+ #id-img-olho{
     position: relative;
     cursor: pointer;
-    right: 0px;
-    top: 2px;
+    left: 4px;
+    top: 5px;
     width: 28px;
     height: 20px;
-    color: white;
+    color: rgb(153, 13, 13);
 }
 
 #id-img-iris{
     position:absolute;
     cursor: pointer;
+    top: 10px;
+    left: 14px;
     width: 8px;
     border-radius: 50%;
     pointer-events:none; /* Impede que a pupila receba eventos do mouse */

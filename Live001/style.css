@@ -14,13 +14,16 @@ body{
 
 #id-div-senha{
     display: flex;
-    justify-content: center;
-    margin:auto;
-
+    margin: auto;
+    width: 930px;
+    height: 110px;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid blue;
+    border-radius: 10px;
 }
 #id-div-senha input{
-    width: 200px;
-    height: 30px;
+    width: 710px;
+    height: 100px;
     padding-right: 25px;
     border: 2px solid rgb(255, 255, 255) ;
     border-radius: 4px;
@@ -28,39 +31,47 @@ body{
     color: rgb(0, 0, 0);
     position: relative;
     top: 4px;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
    
 }
 
 
 /* div olho*/
 #id-div-olho{
-    background-color: transparent;
+
+    display: flex;
+    background-color: red;
     position: relative;
     cursor: pointer;
-    right: 32px;
-    top: 3px;
-    width: 28px;
-    height: 24px;
+    right: 0%;
+    top: 50%;
+    width: 200px;
+    height: 100px;
+    transform: translate(-0%,-50%);
 }
 
  #id-img-olho{
-    position: relative;
+    
     cursor: pointer;
-    left: 4px;
-    top: 5px;
-    width: 28px;
-    height: 20px;
+    width: 200px;
+    height: 100px;
     color: rgb(153, 13, 13);
+    margin: auto;
+    justify-content: center;
+    align-items: center;
 }
 
 #id-img-iris{
-    position:absolute;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     cursor: pointer;
-    top: 10px;
-    left: 14px;
-    width: 8px;
-    border-radius: 50%;
+    width: 20%;
     pointer-events:none; /* Impede que a pupila receba eventos do mouse */
+    
 }
 
 

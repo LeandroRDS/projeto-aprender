@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project clok</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+    <ul id="relogio">
+        <li class="item-circulo" style="--clr:#d9ff02;">
+            <i class="pontos h_ponto"></i>
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="hh"></circle>
+            </svg>
+            <div id="horas">00</div>
+        </li>
+        <li class="item-circulo" style="--clr:#bb00ff;">
+            <i class="pontos m_ponto"></i>
+
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="mm"></circle>
+            </svg>
+            <div id="minutos">00</div>
+        </li>
+        <li class="item-circulo" style="--clr:#ff9100;">
+            <i class="pontos s_ponto"></i>
+
+            <svg>
+                <circle cx="70" cy="70" r="70"></circle>
+                <circle cx="70" cy="70" r="70" id="ss"></circle>
+            </svg>
+            <div id="segundos">00</div>
+        </li>
+        <li class="ap">
+            <div id="ampm"></div>
+        </li>
+    </ul>
+
+    <script src="javascript.js"></script>
+</body>
+</html>

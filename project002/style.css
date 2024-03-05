@@ -1,0 +1,98 @@
+*{
+    margin: 0px;
+    border: 0px;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2f353e;
+}
+
+#relogio{
+    display: flex;
+    gap: 40px; /*espaçamaneto inteno entre os elementos*/
+}
+
+.item-circulo{
+    position: relative;
+    list-style: none;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 40, 128);
+}
+
+.item-circulo svg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:3px;
+    left:3px;
+    transform: rotate(270deg);
+    
+}
+
+#horas, #minutos, #segundos{
+    position: absolute;
+    padding-top: 10px;
+    font-weight: 500;
+    font-size: 1.5;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+}
+#horas>span, #minutos>span,  #segundos>span {
+    display: block;
+
+    margin-top: 10px;
+    font-size: .65em;
+    letter-spacing: .1em;
+}
+
+#relogio .ap{
+    list-style: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1em;
+    transform: translateX(-20px);
+}
+
+.item-circulo svg circle{
+    fill: transparent;
+    stroke-width: 4px;
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    transform: translate(2px, 2px);
+}
+
+.item-circulo svg circle:nth-of-type(1){
+    stroke: transparent;
+    stroke: #040305;
+}
+
+.item-circulo .pontos{
+    position: absolute;
+    top: 3px;
+    /* background-color: red; */
+    display: flex;
+    z-index: 10;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.item-circulo .pontos::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background-color: var(--clr);
+    border-radius: 50%;
+}
